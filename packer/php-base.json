@@ -1,9 +1,6 @@
 {
     "variables": {
-        "ubuntu-16-04-x64": "ami-f4f21593",
-        "hostname": "packer-test",
-        "ssh_name": "packer",
-        "ssh_pass": "packer"
+        "ubuntu-16-04-x64": "ami-f4f21593"
     },
     "builders": [
         {
@@ -19,6 +16,7 @@
             "force_deregister": true,
             "force_delete_snapshot": true,
             "tags": {
+                "Name": "PHP Base",
                 "Role": "php-base"
             }
         }
